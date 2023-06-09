@@ -60,7 +60,7 @@ rmsd 2pph.pdb
 ```
 
 ### 5. `hbonds.tcl`
-It provides the `proc get_hbonds {mol}` `proc` which gets a `mul` ID as input, then using the `measure hbonds`, finds the index of the atoms contributing in the *hbonds* and provides the following attributes for each selected atom: {*resid*, *resname*, *structure*, *$\phi$*, *$\psi$*, *$\omega$*, *rgyr*}.
+It provides the `proc get_hbonds {mol}` `proc` which gets a `mul` ID as input, then using the `measure hbonds`, finds the index of the atoms contributing in the *hbonds* and provides the following attributes for each selected atom: {*resid*, *resname*, *structure*, $\phi$, $\psi$, $\omega$, *rgyr*}.
 Note that unlike $\phi$ and $\psi$, $\omega$ is not calculated by the *VMD*, so we provided another procedure called `omega_dihedral {mul  resid}`  which selects the $C_\alpha$, $C$ atoms of the given residue, and $N$,  $C_\alpha$ of the next residue in the chain, and returns the $\omega$ angle as: $$\omega = \texttt{measure dihed } \{ C_\alpha, C, N^{+1}, C^{+1}_\alpha \}$$
 <sub>$+1$ superpos indicates the next residue atoms.</sub>
 
