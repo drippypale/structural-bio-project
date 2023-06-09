@@ -18,7 +18,6 @@ proc get_hbonds {mol} {
     set hbonds [measure hbonds 20 3.4 $sel]
     # get the location of the hydrogen bonds
     set hbonds_location [lindex $hbonds 2] 
-    puts $hbonds_location
 
     # select the residues involved in the hydrogen bonds
     set residues [atomselect $mol "index $hbonds_location"] 
