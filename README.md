@@ -69,7 +69,6 @@ Finally the `proc get_hbonds {mol}` procedure, writes out the results as a `csv`
 Example usage:
 ```tcl
 set mul [mol load pdb 2pph.pdb]
-source phi_psi.tcl
-save_phi_psi $mul
+source hbonds.tcl
+get_hbonds $mul
 ```
-There is also a `ramachandran.ipynb` jupyter notebook which you can run in order to plot the *Ramachandran* plot from the **phi_psi.txt**.
